@@ -38,9 +38,7 @@ def parse_uniprot(entry):
     species_raw = [x for x in fields if "OS=" in x][0]
     species_idx = [i for i in range(len(fields)) if fields[i] == species_raw][0]
     protein = " ".join(fields[1:species_idx])
-    print(protein)
     species = species_raw.split("=")[1]
-    print(species)
     meta = {
         'species': species,
         'protein': protein

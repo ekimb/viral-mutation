@@ -8,13 +8,13 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Coronavirus sequence analysis')
     parser.add_argument('model_name', type=str,
                         help='Type of language model (e.g., hmm, lstm)')
-    parser.add_argument('--namespace', type=str, default='cov',
+    parser.add_argument('--namespace', type=str, default='uniprot',
                         help='Model namespace')
     parser.add_argument('--dim', type=int, default=512,
                         help='Embedding dimension')
-    parser.add_argument('--batch-size', type=int, default=500,
+    parser.add_argument('--batch-size', type=int, default=1024,
                         help='Training minibatch size')
-    parser.add_argument('--n-epochs', type=int, default=11,
+    parser.add_argument('--n-epochs', type=int, default=1,
                         help='Number of training epochs')
     parser.add_argument('--seed', type=int, default=1,
                         help='Random seed')
